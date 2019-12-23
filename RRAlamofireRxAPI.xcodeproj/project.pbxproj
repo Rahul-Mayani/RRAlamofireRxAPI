@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D509D1B05FE34454BE301982 /* Pods_RRAlamofireRxAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33CA833186DB0EB44D6F4230 /* Pods_RRAlamofireRxAPI.framework */; };
+		EEDB06A823B0E70600A5542D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDB06A723B0E70600A5542D /* AppDelegate.swift */; };
+		EEDB06AC23B0E70600A5542D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDB06AB23B0E70600A5542D /* ViewController.swift */; };
+		EEDB06AF23B0E70600A5542D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEDB06AD23B0E70600A5542D /* Main.storyboard */; };
+		EEDB06B123B0E70A00A5542D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDB06B023B0E70A00A5542D /* Assets.xcassets */; };
+		EEDB06B423B0E70A00A5542D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEDB06B223B0E70A00A5542D /* LaunchScreen.storyboard */; };
+		EEDB06BC23B0E7CD00A5542D /* RRAPIRxManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDB06BB23B0E7CD00A5542D /* RRAPIRxManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		33CA833186DB0EB44D6F4230 /* Pods_RRAlamofireRxAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RRAlamofireRxAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB0E79BF738A0F87A6AB141A /* Pods-RRAlamofireRxAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RRAlamofireRxAPI.debug.xcconfig"; path = "Target Support Files/Pods-RRAlamofireRxAPI/Pods-RRAlamofireRxAPI.debug.xcconfig"; sourceTree = "<group>"; };
+		E9BEB806BB30041D6C37A41E /* Pods-RRAlamofireRxAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RRAlamofireRxAPI.release.xcconfig"; path = "Target Support Files/Pods-RRAlamofireRxAPI/Pods-RRAlamofireRxAPI.release.xcconfig"; sourceTree = "<group>"; };
+		EEDB06A423B0E70600A5542D /* RRAlamofireRxAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RRAlamofireRxAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEDB06A723B0E70600A5542D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EEDB06AB23B0E70600A5542D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EEDB06AE23B0E70600A5542D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EEDB06B023B0E70A00A5542D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EEDB06B323B0E70A00A5542D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EEDB06B523B0E70A00A5542D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEDB06BB23B0E7CD00A5542D /* RRAPIRxManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RRAPIRxManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EEDB06A123B0E70600A5542D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D509D1B05FE34454BE301982 /* Pods_RRAlamofireRxAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		415C5524C106459A6FB5B436 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DB0E79BF738A0F87A6AB141A /* Pods-RRAlamofireRxAPI.debug.xcconfig */,
+				E9BEB806BB30041D6C37A41E /* Pods-RRAlamofireRxAPI.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		765E306CECF40ACD2574ED7A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33CA833186DB0EB44D6F4230 /* Pods_RRAlamofireRxAPI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EEDB069B23B0E70600A5542D = {
+			isa = PBXGroup;
+			children = (
+				EEDB06A623B0E70600A5542D /* RRAlamofireRxAPI */,
+				EEDB06A523B0E70600A5542D /* Products */,
+				415C5524C106459A6FB5B436 /* Pods */,
+				765E306CECF40ACD2574ED7A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EEDB06A523B0E70600A5542D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEDB06A423B0E70600A5542D /* RRAlamofireRxAPI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EEDB06A623B0E70600A5542D /* RRAlamofireRxAPI */ = {
+			isa = PBXGroup;
+			children = (
+				EEDB06A723B0E70600A5542D /* AppDelegate.swift */,
+				EEDB06AB23B0E70600A5542D /* ViewController.swift */,
+				EEDB06BB23B0E7CD00A5542D /* RRAPIRxManager.swift */,
+				EEDB06AD23B0E70600A5542D /* Main.storyboard */,
+				EEDB06B023B0E70A00A5542D /* Assets.xcassets */,
+				EEDB06B223B0E70A00A5542D /* LaunchScreen.storyboard */,
+				EEDB06B523B0E70A00A5542D /* Info.plist */,
+			);
+			path = RRAlamofireRxAPI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EEDB06A323B0E70600A5542D /* RRAlamofireRxAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEDB06B823B0E70A00A5542D /* Build configuration list for PBXNativeTarget "RRAlamofireRxAPI" */;
+			buildPhases = (
+				6738BFE1EE6B87231DD11D9E /* [CP] Check Pods Manifest.lock */,
+				EEDB06A023B0E70600A5542D /* Sources */,
+				EEDB06A123B0E70600A5542D /* Frameworks */,
+				EEDB06A223B0E70600A5542D /* Resources */,
+				1BAC9D1F1D01287F353B0449 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RRAlamofireRxAPI;
+			productName = RRAlamofireRxAPI;
+			productReference = EEDB06A423B0E70600A5542D /* RRAlamofireRxAPI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EEDB069C23B0E70600A5542D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = RR;
+				TargetAttributes = {
+					EEDB06A323B0E70600A5542D = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = EEDB069F23B0E70600A5542D /* Build configuration list for PBXProject "RRAlamofireRxAPI" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EEDB069B23B0E70600A5542D;
+			productRefGroup = EEDB06A523B0E70600A5542D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EEDB06A323B0E70600A5542D /* RRAlamofireRxAPI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EEDB06A223B0E70600A5542D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEDB06B423B0E70A00A5542D /* LaunchScreen.storyboard in Resources */,
+				EEDB06B123B0E70A00A5542D /* Assets.xcassets in Resources */,
+				EEDB06AF23B0E70600A5542D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1BAC9D1F1D01287F353B0449 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RRAlamofireRxAPI/Pods-RRAlamofireRxAPI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RRAlamofireRxAPI/Pods-RRAlamofireRxAPI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RRAlamofireRxAPI/Pods-RRAlamofireRxAPI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6738BFE1EE6B87231DD11D9E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RRAlamofireRxAPI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EEDB06A023B0E70600A5542D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEDB06AC23B0E70600A5542D /* ViewController.swift in Sources */,
+				EEDB06A823B0E70600A5542D /* AppDelegate.swift in Sources */,
+				EEDB06BC23B0E7CD00A5542D /* RRAPIRxManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EEDB06AD23B0E70600A5542D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEDB06AE23B0E70600A5542D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EEDB06B223B0E70A00A5542D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEDB06B323B0E70A00A5542D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EEDB06B623B0E70A00A5542D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EEDB06B723B0E70A00A5542D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EEDB06B923B0E70A00A5542D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB0E79BF738A0F87A6AB141A /* Pods-RRAlamofireRxAPI.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RRAlamofireRxAPI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rr.RRAlamofireRxAPI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		EEDB06BA23B0E70A00A5542D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9BEB806BB30041D6C37A41E /* Pods-RRAlamofireRxAPI.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RRAlamofireRxAPI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rr.RRAlamofireRxAPI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EEDB069F23B0E70600A5542D /* Build configuration list for PBXProject "RRAlamofireRxAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEDB06B623B0E70A00A5542D /* Debug */,
+				EEDB06B723B0E70A00A5542D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEDB06B823B0E70A00A5542D /* Build configuration list for PBXNativeTarget "RRAlamofireRxAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEDB06B923B0E70A00A5542D /* Debug */,
+				EEDB06BA23B0E70A00A5542D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EEDB069C23B0E70600A5542D /* Project object */;
+}
