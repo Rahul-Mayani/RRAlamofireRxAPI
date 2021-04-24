@@ -5,6 +5,8 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/Rahul-Mayani/RRAlamofireRxAPI/blob/master/LICENSE)
 [![iOS](https://img.shields.io/badge/Platform-iOS-purpel.svg?style=flat)](https://developer.apple.com/ios/)
 
+[![SPM](https://img.shields.io/badge/SPM-orange.svg?style=flat)](https://swift.org/package-manager/)
+
 [![Swift 5](https://img.shields.io/badge/Swift-5-orange.svg?style=flat)](https://developer.apple.com/swift/)
 
 
@@ -32,6 +34,9 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'RRAlamofireRxAPI'
 ```
+
+#### SPM (Swift Package Manager)
+In Xcode, use the menu File > Swift Packages > Add Package Dependency... and enter the package URL `https://github.com/Rahul-Mayani/RRAlamofireRxAPI`.
 
 ## Example
 
