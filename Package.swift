@@ -16,7 +16,6 @@ let package = Package(
         // Dependencies declare other packages that this package depends on.
         .package(url: "https://github.com/Rahul-Mayani/RRAlamofireRxAPI", from: "1.0.0"),
         .package(url: "https://github.com/ReactiveX/RxSwift.git", .exact("6.0.0")),
-        .package(url: "https://github.com/ReactiveX/RxRelay.git", .exact("6.0.0")),
         .package(url: "https://github.com/ReactiveX/RxCocoa.git", .exact("6.0.0")),
         .package(url: "https://github.com/Alamofire/Alamofire.git", . exact("4.9.1"))
     ],
