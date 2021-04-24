@@ -1,0 +1,6 @@
+framework module Pods_RRAlamofireRxAPI_Example {
+  umbrella header "Pods-RRAlamofireRxAPI_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,38 @@
+PODS:
+  - Alamofire (4.9.1)
+  - RRAlamofireRxAPI (0.1.0):
+    - Alamofire (~> 4.9.1)
+    - RxCocoa (~> 6.0.0)
+    - RxRelay (~> 6.0.0)
+    - RxSwift (~> 6.0.0)
+  - RxCocoa (6.0.0):
+    - RxRelay (= 6.0.0)
+    - RxSwift (= 6.0.0)
+  - RxRelay (6.0.0):
+    - RxSwift (= 6.0.0)
+  - RxSwift (6.0.0)
+
+DEPENDENCIES:
+  - RRAlamofireRxAPI (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+
+EXTERNAL SOURCES:
+  RRAlamofireRxAPI:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  RRAlamofireRxAPI: 1caa9b2ffafb1ef8e9228041dc57beb724557d00
+  RxCocoa: 3f79328fafa3645b34600f37c31e64c73ae3a80e
+  RxRelay: 8d593be109c06ea850df027351beba614b012ffb
+  RxSwift: c14e798c59b9f6e9a2df8fd235602e85cc044295
+
+PODFILE CHECKSUM: 293226831758d7491c65f992507c8703b0b8d2d8
+
+COCOAPODS: 1.10.1
