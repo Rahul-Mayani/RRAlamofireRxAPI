@@ -17,5 +17,5 @@ Pod::Spec.new do |s|
   s.dependency 'RxCocoa', '~> 6.0.0'
   s.dependency 'Alamofire', '~> 4.9.1'
   
-  s.source_files = 'Source/*.swift'
+  s.source_files = 'Sources/RRAlamofireRxAPI/*.swift'
 end
