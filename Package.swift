@@ -24,7 +24,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "RRAlamofireRxAPI",
-            dependencies: ["RxSwift", "RxCocoa", "RxRelay", "Alamofire"]),
+            dependencies: ["RxSwift", "RxCocoa", "Alamofire"]),
         .testTarget(
             name: "RRAlamofireRxAPITests",
             dependencies: ["RRAlamofireRxAPI"])
