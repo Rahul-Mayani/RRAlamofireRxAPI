@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/Rahul-Mayani/RRAlamofireRxAPI'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Rahul Mayani' => 'mayani.rahul@gmail.com' }
-  s.source           = { :git => 'https://github.com/Rahul-Mayani/RRAlamofireRxAPI.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/Rahul-Mayani/RRAlamofireRxAPI.git', :branch => "master", :tag => s.version.to_s }
 
   s.cocoapods_version = '>= 1.10.1'
   s.ios.deployment_target = '12.0'

@@ -1,9 +1,9 @@
 # RRAlamofireRxAPI
 
-[![CI Status](https://img.shields.io/travis/Rahul/RRAlamofireRxAPI.svg?style=flat)](https://github.com/Rahul-Mayani/RRAlamofireRxAPI)
-[![Version](https://img.shields.io/cocoapods/v/RRAlamofireRxAPI.svg?style=flat)](https://cocoapods.org/pods/RRAlamofireRxAPI)
-[![License](https://img.shields.io/cocoapods/l/RRAlamofireRxAPI.svg?style=flat)](https://cocoapods.org/pods/RRAlamofireRxAPI)
-[![Platform](https://img.shields.io/cocoapods/p/RRAlamofireRxAPI.svg?style=flat)](https://cocoapods.org/pods/RRAlamofireRxAPI)
+[![Cocoa Pod](https://img.shields.io/badge/Cocoapods-blue.svg?style=flat)](https://cocoapods.org/)
+[![Version](https://img.shields.io/badge/Version-0.1.0-orange.svg?style=flat)](https://cocoapods.org/pods/RRAlamofireRxAPI)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/Rahul-Mayani/RRAlamofireRxAPI/blob/master/LICENSE)
+[![iOS](https://img.shields.io/badge/Platform-iOS-purpel.svg?style=flat)](https://developer.apple.com/ios/)
 
 [![Swift 5](https://img.shields.io/badge/Swift-5-orange.svg?style=flat)](https://developer.apple.com/swift/)
 
