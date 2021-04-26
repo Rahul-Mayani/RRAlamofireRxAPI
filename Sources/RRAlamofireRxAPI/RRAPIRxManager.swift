@@ -121,8 +121,8 @@ extension ObservableType {
      Makes the observable Subscribe to concurrent background thread and Observe on main thread
      */
     public func subscribeConcurrentBackgroundToMainThreads() -> Observable<Element> {
-        return self.subscribeOn(RXScheduler.concurrentBackground)
-            .observeOn(RXScheduler.main)
+        return self.subscribe(on: RXScheduler.concurrentBackground)
+            .observe(on: RXScheduler.main)
     }
     
     /**
@@ -130,7 +130,7 @@ extension ObservableType {
      */
     public func delaySubscribeConcurrentBackgroundToMainThreads(_ time: RxTimeInterval = .seconds(2)) -> Observable<Element> {
         return self.delaySubscription(time, scheduler: RXScheduler.concurrentBackground)
-            .observeOn(RXScheduler.main)
+            .observe(on: RXScheduler.main)
     }
 }
 
