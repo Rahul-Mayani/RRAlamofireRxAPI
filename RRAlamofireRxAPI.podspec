@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'RRAlamofireRxAPI'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'Elegant rest HTTP Networking request in Swift'
   s.homepage         = 'https://github.com/Rahul-Mayani/RRAlamofireRxAPI'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
