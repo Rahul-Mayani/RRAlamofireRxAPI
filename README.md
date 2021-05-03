@@ -32,7 +32,7 @@ RRAlamofireRxAPI is available through [CocoaPods](https://cocoapods.org). To ins
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'RRAlamofireRxAPI'
+pod 'RRAlamofireRxAPI', '~> 2.0.0'
 ```
 
 #### SPM (Swift Package Manager)
@@ -49,18 +49,18 @@ To run the example project, clone the repo, and run pod install from the Example
 ```swift
 
 let param = [:]
-RRAPIRxManager.rxCall(apiUrl: "API URL", httpMethod: .post, param: param) // Post Request
-.flatMap { (response1) -> Observable<Any> in
-    print(response1)
-    return RRAPIRxManager.rxCall(apiUrl: "API URL") // Get Request
-}
-/*.delaySubscription(.seconds(5), scheduler: RXScheduler.concurrentBackground)*/
-.subscribeConcurrentBackgroundToMainThreads()
-.subscribe(onNext: { response in
-    print(response)
-}, onError: { error in
-    print(error)
-}).disposed(by: rxbag)
+RRAPIRxManager.shared.setURL("API URL") // Post Request
+    .setHttpMethod(.post)
+    .setParameter(param)
+    .setDeferredAsObservable()
+    .flatMap { (response1) -> Observable<Any> in
+        return RRAPIRxManager.shared.setURL("API URL") // Get Request
+                .setDeferredAsObservable()
+    }.subscribe { (response) in
+        print(response)
+    } onError: { (error) in
+        print(error)
+    }.disposed(by: rxbag)
 
 ```
 

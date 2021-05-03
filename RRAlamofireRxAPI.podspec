@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'RRAlamofireRxAPI'
-  s.version          = '1.0.0'
+  s.version          = '2.0.0'
   s.summary          = 'Elegant rest HTTP Networking request in Swift'
   s.homepage         = 'https://github.com/Rahul-Mayani/RRAlamofireRxAPI'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.dependency 'RxSwift', '~> 6.0.0'
   s.dependency 'RxRelay', '~> 6.0.0'
   s.dependency 'RxCocoa', '~> 6.0.0'
-  s.dependency 'Alamofire', '~> 4.9.1'
+  s.dependency 'Alamofire', '~> 5.2'
   
   s.source_files = 'Sources/RRAlamofireRxAPI/*.swift'
 end

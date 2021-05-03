@@ -21,18 +21,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let param = ["name":"test","salary":"123","age":"23"]
-        RRAPIRxManager.rxCall(apiUrl: "http://dummy.restapiexample.com/api/v1/create", httpMethod: .post, param: param)
-        .flatMap { (response1) -> Observable<Any> in
-            print(response1)
-            return RRAPIRxManager.rxCall(apiUrl: "http://dummy.restapiexample.com/api/v1/employees")
-        }
-        /*.delaySubscription(.seconds(5), scheduler: RXScheduler.concurrentBackground)*/
-        .subscribeConcurrentBackgroundToMainThreads()
-        .subscribe(onNext: { response in
-            print(response)
-        }, onError: { error in
-            print(error)
-        }).disposed(by: rxbag)
+        RRAPIRxManager.shared.setURL("http://dummy.restapiexample.com/api/v1/create")
+            .setHttpMethod(.post)
+            .setParameter(param)
+            .setDeferredAsObservable()
+            .flatMap { (response1) -> Observable<Any> in
+                return RRAPIRxManager.shared.setURL("http://dummy.restapiexample.com/api/v1/employees")
+                        .setDeferredAsObservable()
+            }.subscribe { (response) in
+                print(response)
+            } onError: { (error) in
+                print(error)
+            }.disposed(by: rxbag)
     }
 }
 

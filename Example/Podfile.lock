@@ -1,7 +1,7 @@
 PODS:
-  - Alamofire (4.9.1)
-  - RRAlamofireRxAPI (1.0.0):
-    - Alamofire (~> 4.9.1)
+  - Alamofire (5.4.3)
+  - RRAlamofireRxAPI (2.0.0):
+    - Alamofire (~> 5.2)
     - RxCocoa (~> 6.0.0)
     - RxRelay (~> 6.0.0)
     - RxSwift (~> 6.0.0)
@@ -27,8 +27,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  RRAlamofireRxAPI: 1115311f9477cace0351064917a113a643866022
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  RRAlamofireRxAPI: cdd0382d5706d292764c9e187653f27f38e1aeef
   RxCocoa: 3f79328fafa3645b34600f37c31e64c73ae3a80e
   RxRelay: 8d593be109c06ea850df027351beba614b012ffb
   RxSwift: c14e798c59b9f6e9a2df8fd235602e85cc044295
