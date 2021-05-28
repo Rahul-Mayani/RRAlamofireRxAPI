@@ -14,7 +14,7 @@ let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/Rahul-Mayani/RRAlamofireRxAPI", from: "2.1.0"),
+        .package(url: "https://github.com/Rahul-Mayani/RRAlamofireRxAPI", from: "2.1.1"),
         .package(url: "https://github.com/ReactiveX/RxSwift.git", from: "6.2.0"),
         .package(url: "https://github.com/Alamofire/Alamofire.git", from: "5.4.0"),
     ],
@@ -27,7 +27,6 @@ let package = Package(
                       .product(name: "RxCocoa", package: "RxSwift"),
                       .product(name: "RxRelay", package: "RxSwift"),
                       .product(name: "RxBlocking", package: "RxSwift"),
-                      .product(name: "RxTest", package: "RxSwift"),
          ]),
         /*.target(
             name: "RRAlamofireRxAPI",
