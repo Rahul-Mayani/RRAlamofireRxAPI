@@ -14,19 +14,30 @@ let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/Rahul-Mayani/RRAlamofireRxAPI", from: "2.0.1"),
+        .package(url: "https://github.com/Rahul-Mayani/RRAlamofireRxAPI", from: "2.0.3"),
         .package(url: "https://github.com/ReactiveX/RxSwift.git", from: "6.2.0"),
         .package(url: "https://github.com/Alamofire/Alamofire.git", from: "5.4.0"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(
+        Target.rxCocoa(),
+        /*.target(
             name: "RRAlamofireRxAPI",
-            dependencies: ["RxSwift", "Alamofire"]),
+            dependencies: ["RxSwift", "Alamofire"]),*/
         .testTarget(
             name: "RRAlamofireRxAPITests",
             dependencies: ["RRAlamofireRxAPI"]),
     ],
     swiftLanguageVersions: [.v5]
 )
+
+extension Target {
+  static func rxCocoa() -> Target {
+    #if os(Linux)
+      return .target(name: "RRAlamofireRxAPI", dependencies: ["RxSwift", "RxCocoa", "RxRelay", "Alamofire"])
+    #else
+      return .target(name: "RRAlamofireRxAPI", dependencies: ["RxSwift", "RxCocoa" ,"RxRelay", "RxCocoaRuntime", "Alamofire"])
+    #endif
+  }
+}
