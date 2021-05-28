@@ -14,14 +14,21 @@ let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/Rahul-Mayani/RRAlamofireRxAPI", from: "2.0.4"),
+        .package(url: "https://github.com/Rahul-Mayani/RRAlamofireRxAPI", from: "2.1.0"),
         .package(url: "https://github.com/ReactiveX/RxSwift.git", from: "6.2.0"),
         .package(url: "https://github.com/Alamofire/Alamofire.git", from: "5.4.0"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        Target.rxCocoa(),
+         .target(name: "RRAlamofireRxAPI", dependencies: [
+                      "RxSwift",
+                      "Alamofire",
+                      .product(name: "RxCocoa", package: "RxSwift"),
+                      .product(name: "RxRelay", package: "RxSwift"),
+                      .product(name: "RxBlocking", package: "RxSwift"),
+                      .product(name: "RxTest", package: "RxSwift"),
+         ]),
         /*.target(
             name: "RRAlamofireRxAPI",
             dependencies: ["RxSwift", "Alamofire"]),*/
@@ -31,24 +38,3 @@ let package = Package(
     ],
     swiftLanguageVersions: [.v5]
 )
-
-extension Target {
-  static func rxCocoa() -> Target {
-    #if os(Linux)
-      return .target(name: "RRAlamofireRxAPI", dependencies: [
-                        "RxSwift",
-                        "Alamofire",
-                        .product(name: "RxCocoa", package: "RxSwift"),
-                        .product(name: "RxRelay", package: "RxSwift"),
-      ])
-    #else
-      return .target(name: "RRAlamofireRxAPI", dependencies: [
-                        "RxSwift",
-                        "Alamofire",
-                        .product(name: "RxCocoa", package: "RxSwift"),
-                        .product(name: "RxRelay", package: "RxSwift"),
-                        .product(name: "RxCocoaRuntime", package: "RxSwift"),
-      ])
-    #endif
-  }
-}
