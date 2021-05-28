@@ -35,9 +35,20 @@ let package = Package(
 extension Target {
   static func rxCocoa() -> Target {
     #if os(Linux)
-      return .target(name: "RRAlamofireRxAPI", dependencies: ["RxSwift", "RxCocoa", "RxRelay", "Alamofire"])
+      return .target(name: "RRAlamofireRxAPI", dependencies: [
+                        "RxSwift",
+                        "Alamofire",
+                        .product(name: "RxCocoa", package: "RxSwift"),
+                        .product(name: "RxRelay", package: "RxSwift"),
+      ])
     #else
-      return .target(name: "RRAlamofireRxAPI", dependencies: ["RxSwift", "RxCocoa" ,"RxRelay", "RxCocoaRuntime", "Alamofire"])
+      return .target(name: "RRAlamofireRxAPI", dependencies: [
+                        "RxSwift",
+                        "Alamofire",
+                        .product(name: "RxCocoa", package: "RxSwift"),
+                        .product(name: "RxRelay", package: "RxSwift"),
+                        .product(name: "RxCocoaRuntime", package: "RxSwift"),
+      ])
     #endif
   }
 }
