@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import RxCocoaRuntime
 import RxCocoa
 import RxSwift
 import Alamofire
