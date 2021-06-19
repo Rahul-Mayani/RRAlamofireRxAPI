@@ -48,19 +48,62 @@ To run the example project, clone the repo, and run pod install from the Example
 
 ```swift
 
-let param = [:]
-RRAPIRxManager.shared.setURL("API URL") // Post Request
-    .setHttpMethod(.post)
-    .setParameter(param)
-    .setDeferredAsObservable()
-    .flatMap { (response1) -> Observable<Any> in
-        return RRAPIRxManager.shared.setURL("API URL") // Get Request
-                .setDeferredAsObservable()
-    }.subscribe { (response) in
+/// Uses
+let createCustomSession = Session()
+let request =  RRAPIRxManager.shared
+                  .setSessionManager(createCustomSession) //`Session` creates and manages Alamofire's `Request` types during their lifetimes.
+                  .setHttpMethod(.get) // httpMethod: GET, POST, PUT & DELETE
+                  .setURL("Your API URL")
+                  .setHeaders([:]) // a dictionary of parameters to apply to a `HTTPHeaders`.
+                  .setParameter([:]) // a dictionary of parameters to apply to a `URLRequest`.
+
+request.setDeferredAsObservable()
+    .subscribeConcurrentBackgroundToMainThreads()
+    .subscribe { (response) in
+        /// The response of data type is Data.
+        /// <#T##Here: decode JSON Data into your custom model structure / class#>
         print(response)
     } onError: { (error) in
-        print(error)
+        print(error.localizedDescription)
     }.disposed(by: rxbag)
+            
+
+ /// Example 1
+ /// Loader start
+ let userIds = [1, 2, 3]
+ Observable.from(userIds)
+     .flatMap { (userId) -> Observable<Any> in
+         return RRAPIRxManager.shared.setURL("https://jsonplaceholder.typicode.com/users/\(userId)")
+                 .setDeferredAsObservable()
+     }
+     .toArray() // collecting all users object data
+     .asObservable()
+     .subscribeConcurrentBackgroundToMainThreads()
+     .subscribe { (response) in
+         print("Got users:")
+         /// Loader stop
+     } onError: { (error) in
+         print(error)
+     }.disposed(by: rxbag)
+
+  /// Example 2
+  /// Loader start
+  RRAPIRxManager.shared.setURL("https://jsonplaceholder.typicode.com/users/1")
+      .flatMap { response -> Observable<Any> in
+          guard let data = response as? [String:Any] else { return Observable.empty() }
+          print(data["username"] ?? "")
+          return RRAPIRxManager.shared.setURL("https://jsonplaceholder.typicode.com/users/2")
+                  //.delaySubscribeConcurrentBackgroundToMainThreads(.milliseconds(200))
+                  .setDeferredAsObservable()
+      }
+      .subscribeConcurrentBackgroundToMainThreads()
+      .subscribe { (response) in
+          guard let data = response as? [String:Any] else { return }
+          print(data["username"] ?? "")
+          /// Loader stop
+      } onError: { (error) in
+          print(error)
+      }.disposed(by: rxbag)
 
 ```
 
